@@ -29,7 +29,7 @@ public class AppConfig {
                 .csrf(csrf -> csrf.disable())
                 .formLogin(form -> form.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/users/login", "/users/signup").permitAll()
+                        .requestMatchers("/", "/users/login", "/users/signup", "/users/health").permitAll()
                         .anyRequest().authenticated()
                 )
                 .securityContext(context -> context

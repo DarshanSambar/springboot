@@ -28,6 +28,11 @@ public class UserController {
     @Autowired
     private SecurityContextRepository securityContextRepository;
 
+    @GetMapping("/health")
+    public String health() {
+        return "OK";
+    }
+
     @GetMapping("/hello")
     public String hello() {
         return "hello";
